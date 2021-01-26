@@ -20,6 +20,10 @@ class BilibiliRecommender {
         for (currentCardNum = 10; currentCardNum < this.generateNum + 10; ++currentCardNum) {
             document.querySelector(".rcmd-box").append(document.querySelector(".video-card-reco").cloneNode(true));
         }
+        for (let i of Array.from(document.querySelectorAll(".video-card-reco"))) {
+            i.style.display='block';
+        }
+
         this.replaceRcmdVideo();
         document.querySelector('.change-btn').addEventListener('click', () => this.replaceRcmdVideo());
     }
